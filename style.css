@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Teko', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.clock {
+    display: flex;
+    align-items: baseline;
+}
+
+#clock-hm {
+    font-size: 200px;
+    z-index: 1;
+}
+
+#clock-sc {
+    font-size: 60px;
+    margin-left: 10px;
+    vertical-align: baseline;
+}
+
+#clock-ms {
+    position: absolute;
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.1);
+    z-index: 0;
+    user-select: none;
+    width: 100vw;
+    text-align: center;
+    left: 50%;
+    top: 23rem;
+    transform: translateX(-50%);
+}
+
+#year-background {
+    position: absolute;
+    font-size: 450px;
+    color: rgba(255, 255, 255, 0.1);
+    z-index: 0;
+    user-select: none;
+    width: 100vw;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#fullscreen-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+    padding: 0px 4px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    z-index: 1;
+}
+
+#fullscreen-btn svg {
+    fill: #fff;
+}
+
+#fullscreen-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
