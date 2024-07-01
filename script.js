@@ -17,6 +17,7 @@ function displayTime() {
 
     setTimeout(displayTime, 1000);
 }
+
 function displayMiniSeconds() {
     var now = new Date();
     var getMiliSeconds = now.getMilliseconds();
