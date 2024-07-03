@@ -309,6 +309,351 @@ body, html {
     }
 }
 
+@media screen and (max-width: 620px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    
+    .clock {
+        display: flex;
+        align-items: baseline;
+    }
+    
+    #clock-hm {
+        font-size: 100px;
+        z-index: 1;
+    }
+    
+    #clock-sc {
+        font-size: 60px;
+        margin-left: 10px;
+        vertical-align: baseline;
+    }
+    
+    #clock-ms {
+        position: absolute;
+        font-size: 60px;
+        color: rgba(255, 255, 255, 0.1);
+        z-index: 0;
+        user-select: none;
+        width: 100vw;
+        text-align: center;
+        left: 50%;
+        bottom: 900rem;
+        transform: translateX(-50%);
+    }
+    
+    #year-background {
+        position: absolute;
+        font-size: 200px;
+        color: rgba(255, 255, 255, 0.1);
+        z-index: 0;
+        user-select: none;
+        width: 100vw;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    #fullscreen-btn {
+        position: absolute;
+        bottom: 20px;
+        right: 15px;
+        padding: 0px 4px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        z-index: 1;
+    }
+    
+    #fullscreen-btn svg {
+        fill: #fff;
+    }
+    
+    #fullscreen-btn:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    :fullscreen {
+        .container {
+            transform: rotate(90deg);
+            width: 100vh;
+            height: 100vw;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .clock {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+        }
+        
+        #clock-hm {
+            font-size: 150px;
+        }
+        
+        #clock-sc {
+            font-size: 75px;
+            margin-left: 10px;
+            vertical-align: baseline;
+        }
+
+        #clock-ms {
+            position: absolute;
+            font-size: 60px;
+            color: rgba(255, 255, 255, 0.1);
+            z-index: 0;
+            user-select: none;
+            width: 100vw;
+            text-align: center;
+            left: 50%;
+            top: 21rem;
+            transform: translateX(-50%);
+        }
+        
+        #year-background {
+            font-size: 300px;
+            left: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    
+    .clock {
+        display: flex;
+        align-items: baseline;
+    }
+    
+    #clock-hm {
+        font-size: 100px;
+        z-index: 1;
+    }
+    
+    #clock-sc {
+        font-size: 60px;
+        margin-left: 10px;
+        vertical-align: baseline;
+    }
+    
+    #clock-ms {
+        position: absolute;
+        font-size: 60px;
+        color: rgba(255, 255, 255, 0.1);
+        z-index: 0;
+        user-select: none;
+        width: 100vw;
+        text-align: center;
+        left: 50%;
+        bottom: 900rem;
+        transform: translateX(-50%);
+    }
+    
+    #year-background {
+        position: absolute;
+        font-size: 200px;
+        color: rgba(255, 255, 255, 0.1);
+        z-index: 0;
+        user-select: none;
+        width: 100vw;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    #fullscreen-btn {
+        position: absolute;
+        bottom: 20px;
+        right: 15px;
+        padding: 0px 4px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        z-index: 1;
+    }
+    
+    #fullscreen-btn svg {
+        fill: #fff;
+    }
+    
+    #fullscreen-btn:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    :fullscreen {
+        .container {
+            transform: rotate(90deg);
+            width: 100vh;
+            height: 100vw;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .clock {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+        }
+        
+        #clock-hm {
+            font-size: 150px;
+        }
+        
+        #clock-sc {
+            font-size: 75px;
+            margin-left: 10px;
+            vertical-align: baseline;
+        }
+
+        #clock-ms {
+            position: absolute;
+            font-size: 60px;
+            color: rgba(255, 255, 255, 0.1);
+            z-index: 0;
+            user-select: none;
+            width: 100vw;
+            text-align: center;
+            left: 50%;
+            top: 20rem;
+            transform: translateX(-50%);
+        }
+        
+        #year-background {
+            font-size: 300px;
+            left: 48%;
+        }
+    }
+}
+
+@media screen and (max-width: 522px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    
+    .clock {
+        display: flex;
+        align-items: baseline;
+    }
+    
+    #clock-hm {
+        font-size: 100px;
+        z-index: 1;
+    }
+    
+    #clock-sc {
+        font-size: 60px;
+        margin-left: 10px;
+        vertical-align: baseline;
+    }
+    
+    #clock-ms {
+        position: absolute;
+        font-size: 60px;
+        color: rgba(255, 255, 255, 0.1);
+        z-index: 0;
+        user-select: none;
+        width: 100vw;
+        text-align: center;
+        left: 50%;
+        bottom: 900rem;
+        transform: translateX(-50%);
+    }
+    
+    #year-background {
+        position: absolute;
+        font-size: 200px;
+        color: rgba(255, 255, 255, 0.1);
+        z-index: 0;
+        user-select: none;
+        width: 100vw;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    #fullscreen-btn {
+        position: absolute;
+        bottom: 20px;
+        right: 15px;
+        padding: 0px 4px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        z-index: 1;
+    }
+    
+    #fullscreen-btn svg {
+        fill: #fff;
+    }
+    
+    #fullscreen-btn:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    :fullscreen {
+        .container {
+            transform: rotate(90deg);
+            width: 100vh;
+            height: 100vw;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .clock {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+        }
+        
+        #clock-hm {
+            font-size: 150px;
+        }
+        
+        #clock-sc {
+            font-size: 75px;
+            margin-left: 10px;
+            vertical-align: baseline;
+        }
+
+        #clock-ms {
+            position: absolute;
+            font-size: 60px;
+            color: rgba(255, 255, 255, 0.1);
+            z-index: 0;
+            user-select: none;
+            width: 100vw;
+            text-align: center;
+            left: 50%;
+            top: 18rem;
+            transform: translateX(-50%);
+        }
+        
+        #year-background {
+            font-size: 300px;
+            left: 45%;
+        }
+    }
+}
+
 @media screen and (max-width: 412px) {
     .container {
         display: flex;
@@ -419,7 +764,7 @@ body, html {
         
         #year-background {
             font-size: 300px;
-            left: 40%;
+            left: 35%;
         }
     }
 }
