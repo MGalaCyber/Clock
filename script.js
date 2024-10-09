@@ -1,3 +1,5 @@
+let wakeLock = null;
+
 function displayTime() {
     var now = new Date();
     var getYear = now.getFullYear();
@@ -38,12 +40,44 @@ function toggleFullscreen() {
     }
 }
 
+async function requestWakeLock() {
+    try {
+        wakeLock = await navigator.wakeLock.request('screen');
+        console.log('Wake Lock is active.');
+    } catch (err) {
+        console.error(`${err.name}, ${err.message}`);
+    }
+}
+
+function releaseWakeLock() {
+    if (wakeLock !== null) {
+        wakeLock.release().then(() => {
+            wakeLock = null;
+            console.log('Wake Lock has been released.');
+        });
+    }
+}
+
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+        requestWakeLock(); // Request Wake Lock when entering fullscreen
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+            releaseWakeLock(); // Release Wake Lock when exiting fullscreen
+        }
+    }
+}
+
 function fullscreenChange() {
     var fullscreenBtn = document.getElementById('fullscreen-btn');
     if (document.fullscreenElement) {
         fullscreenBtn.style.display = 'none';
+        requestWakeLock(); // Ensure Wake Lock is requested if fullscreen
     } else {
         fullscreenBtn.style.display = 'block';
+        releaseWakeLock(); // Release Wake Lock when not fullscreen
     }
 }
 
